@@ -1,0 +1,365 @@
+body{
+/*    background-color:rgb(247, 248, 250);*/
+    background-color:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: space-between;
+/*    padding: 2em;*/
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+/* We tell all items to be 100% width, via flex-basis */
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+  } 
+  
+/* Medium screens */
+
+.main {
+    text-align: center;
+  }
+
+.bo{
+    padding:2%;
+    display: flex;
+    justify-content: space-between;
+}
+.informacion{
+    padding-left: 80px;
+}
+.sesion{
+    border-radius: 2rcap;
+    background-color: white;
+/*    width:70%;*/
+    padding-bottom: 20px;
+}
+.sp{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    /*padding: 10px 0;*/
+    background: rgb(34, 121, 172);    
+}
+nav{
+    align-items: center;
+    background: white;   
+    color: rgb(226, 136, 136);
+}
+nav img{
+    width: 101%;
+    height: 70px;
+}
+nav ul{
+    padding-right: 50px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.titulo{
+    border-top: 100px;
+    padding-top: 1px;
+    border-top-right-radius: 2rcap;
+    border-top-left-radius: 2rcap;
+    background-color: #1d772f;
+}
+.titulo h2{
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: large;
+    color: white;
+}
+
+.corre h3{
+    text-align: center;
+}
+.clave h3{
+    text-align: center;
+}
+
+.footer-links{
+    background: white;
+    color: white;
+    font-size: 10px;
+    padding: 10px 0;
+    border: 1px solid rgb(176, 177, 179);
+    border-radius: 1rcap;
+}
+
+.footer-links2{
+    background: rgb(34, 121, 172);
+    color: white;
+    font-size: 10px;
+    padding: 10px 10px;
+    /* border: 1px solid rgb(176, 177, 179);
+    border-radius: 1rcap; */
+}
+
+.footer-container a{
+    color: white;
+    text-decoration: none;
+    border-color:rgb(104, 104, 187);
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2px;
+    padding-left: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 10px;
+    background: white;
+}
+.footer-container ul{
+    margin: 0 auto;
+}
+.footer-container ul li{
+    list-style: none;
+}
+
+.boton{
+    text-align: center;
+    background: rgb(34, 121, 172);
+    color: white;
+    font-size: 10px;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.face ul li a img{
+    height: 35px;
+    width: 150px;
+}
+
+.twi ul li a img{
+    height: 35px;
+    width: 150px;
+}
+
+.ins ul li a img{
+    height: 35px;
+    width: 150px;
+}
+
+.you ul li a img{
+    height: 35px;
+    width: 150px;
+}
+
+.tik ul li a img{
+    height: 35px;
+    width: 150px;
+}
+
+/* CLASES DEL MENU DESPLEGABLE */
+.menu-wrapper ul{
+    padding: 5px;
+    list-style: none;
+}
+
+li ul{
+    position: absolute;
+    display: none;
+}
+
+li:hover ul{
+    display: block;
+}
+
+.menu-wrapper, li ul{
+    background: #333;
+} 
+
+.principal-menu li:hover{
+    background: #f75e25;
+    text-shadow: 0 0 2px #000;
+}
+
+.menu > li{
+    position: relative;
+    display:inline-block;
+}
+
+.menu > li > a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+    font-family:'Nunito';
+    font-weight: bold;
+    text-decoration: none;
+    /*text-align: center;*/
+}
+
+.menu li a:hover{
+    color: #1a0a74;
+    transition: all .3s;
+    text-shadow: 0 0 5px #054585;
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu2 > li{
+    position: relative;
+    display:inline-block;
+}
+
+.menu2 > li > a{
+    display: block;
+    padding: 40px;
+    color: #fff;
+    font-family:'Nunito';
+    font-weight: bold;
+    text-decoration: none;
+    /*text-align: center;*/
+}
+
+.menu2 li a:hover{
+    color: #1a0a74;
+    transition: all .3s;
+    text-shadow: 0 0 5px #054585;
+}
+
+.menu2 li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Submenu*/
+
+.submenu{
+    position:absolute;
+    background: rgb(227, 234, 238);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    border: 1px solid rgb(176, 177, 179);
+    border-radius: 1rcap;
+    font-style: italic;
+    padding: 5px;
+    width: 150%;
+}
+
+.submenu li a{
+    display: block;
+    padding: 8px;
+    /*padding-right: 5px;
+    padding-left: 5px;*/
+    color: black;
+    font-family:'Nunito';
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.fondo {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    color: #333;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    box-sizing: border-box;
+    fill: rgb(34, 121, 172);
+    fill-rule: evenodd;
+}
+
+.cintillo {
+    background-image: url(../../img/cintilloIpas.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /*width: 110%;*/
+    height: 70px;
+}
+    @media (min-width:320px)  { 
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+        /*body, table, p, .sp{
+            padding-right: 1em;
+            padding: 8px;
+            width: 100%;
+            }*/
+        h1 {
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 12px;
+        }
+        h3 {
+            font-size: 8px;
+        }
+        .menu > li > a {
+           font-size: 12px; 
+        }
+        .menu2 > li > a {
+           font-size: 12px; 
+        }
+        img { 
+            width: 50%;
+            /*height: auto;*/
+        }
+    }
+
+    @media (min-width:480px)  { 
+    /* smartphones, Android phones, landscape iPhone */ 
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        .menu > li > a {
+           font-size: 15px; 
+        }
+        .menu2 > li > a {
+           font-size: 18px; 
+        }
+    }
+    @media (min-width:600px)  { 
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+    }
+    @media (min-width:1100px)  { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+        h1 {
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .menu > li > a {
+            font-size: 18px; 
+        }
+        .menu2 > li > a {
+           font-size: 18px; 
+        }
+        img { 
+            width: 100%;
+            /*height: auto;*/
+        }
+    }
+    @media (min-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */ 
+    }
+    @media (min-width:1281px) { 
+    /* hi-res laptops and desktops */ 
+    }
+      
+    
